@@ -12,3 +12,20 @@ Repository = "https://github.com/jojkaart/ComfyUI-sampler-lcm-alternative"
 PublisherId = "elriel"
 DisplayName = "ComfyUI-sampler-lcm-alternative"
 Icon = ""
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [ 
+    "comfyui_sampler_lcm_alternative",
+    "comfyui_sampler_lcm_alternative.py",
+]
+
+[tool.setuptools.package-dir]
+"comfyui_sampler_lcm_alternative" = "."
+"comfyui_sampler_lcm_alternative.py" = "py"
+
+[project.entry-points."comfyui.custom_nodes"]
+comfyui_sampler_lcm_alternative = "comfyui_sampler_lcm_alternative"
